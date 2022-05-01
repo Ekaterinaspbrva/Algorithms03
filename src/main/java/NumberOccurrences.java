@@ -1,9 +1,12 @@
 public class NumberOccurrences {
 
     public int[][] numberOccurrences (int[] a) {
-
-
-        int nonUni = 0, stopper = 0;
+        for (int i : a) {
+if ((int) i != i) {
+    return null;
+}
+        }
+        int nonUni = 0, stopper;
         for (int counterVar1 = 0; counterVar1 < a.length; counterVar1++) { //counting new arr size
             for (int counterIter = counterVar1 + 1; counterIter < a.length; counterIter++) {
                 if (a[counterVar1] == a[counterIter]) {
